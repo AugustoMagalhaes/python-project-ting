@@ -7,7 +7,7 @@ def get_ocurrencies(word, data):
     return all_lines
 
 
-def find_word(word, all_data):
+def find_words(word, all_data):
     words_found = []
     for data in all_data:
         ocurrencies = {
@@ -23,7 +23,7 @@ def find_word(word, all_data):
 def exists_word(word, instance):
     print(len(instance))
     all_data = [instance.search(index) for index in range(0, len(instance))]
-    word_ocurrencies = find_word(word, all_data)
+    word_ocurrencies = find_words(word, all_data)
     return word_ocurrencies
 
 
